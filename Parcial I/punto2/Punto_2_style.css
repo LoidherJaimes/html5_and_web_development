@@ -77,7 +77,7 @@ nav a:hover {
 }
 
 .news-card img {
-    width: auto;
+    width: 400px;
     height: auto;
     border-radius: 4px;
 }
