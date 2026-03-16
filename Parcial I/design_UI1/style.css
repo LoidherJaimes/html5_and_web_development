@@ -1,230 +1,181 @@
-/* ─── Variables de Color ─── */
+/* ─── Variables de color ─── */
 :root {
-  --crema:     #F5F0E8;
-  --azul-nav:   #1C2B4A;
-  --rojo:       #D94F3D;
-  --verde:      #8BAD8A;
-  --naranja:    #E8902A;
-  --amarillo:   #F2C94C;
-  --morado:     #6B3050;
-  --teal:       #2E8B9A;
-  --salmon:     #E8734A;
-  --rosa:       #E8A0A0;
-  --blanco:     #FFFFFF;
-  --sombra:     rgba(28, 43, 74, 0.12);
+  --crema:    #F5F0E8;
+  --azul-nav: #1C2B4A;
+  --rojo:     #D94F3D;
+  --verde:    #8BAD8A;
+  --naranja:  #E8902A;
+  --amarillo: #F2C94C;
+  --morado:   #6B3050;
+  --teal:     #2E8B9A;
+  --salmon:   #E8734A;
+  --rosa:     #E8A0A0;
+  --blanco:   #FFFFFF;
 }
 
 /* ─── Reset y base ─── */
-*, 
-*::before, 
-*::after { 
-  box-sizing: border-box; 
-  margin: 0; 
-  padding: 0; 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: #E8E3D8;
-  min-height: 100vh;
-  margin: 0;
-  font-family: 'DM Mono', monospace;
-}
-
-/* ─── Tarjeta contenedora principal ─── */
-.card {
   background: var(--crema);
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 8px 8px 0px var(--azul-nav), 0 20px 60px var(--sombra);
-  width: 420px;
+  min-height: 100vh;
+  font-family: 'DM Mono', monospace;
+  display: flex;
+  flex-direction: column;
   animation: entrada 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-@keyframes entrada {
-  from { 
-    opacity: 0; 
-    transform: translateY(24px) scale(0.97); 
-  }
-  to { 
-    opacity: 1; 
-    transform: translateY(0) scale(1); 
-  }
-}
-
-/* ─── Barra de navegación superior ─── */
+/* ─── Barra de navegación ─── */
 .navbar {
   background: var(--azul-nav);
-  height: 28px;
+  height: 50px;
   width: 100%;
+  flex-shrink: 0;
 }
 
-/* ─── Grid principal de 3×3 ─── */
+/* ─── Grid principal 3×3 ─── */
 .grid {
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding: 20px;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 25px;
+  padding: 25px;
+  /* Limitar el ancho máximo para que no se vea raro en pantallas muy anchas */
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /* ─── Celda base ─── */
-.celda {
-  position: relative;
+article.celda {
   aspect-ratio: 1 / 1;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
   cursor: pointer;
 }
 
-.celda:hover {
-  transform: translateY(-3px) scale(1.04);
-  box-shadow: 4px 4px 0 var(--azul-nav);
-}
-
 /* ─── Fila 1 ─── */
-.c1 { 
-  background: var(--rojo); 
-}
 
-.c2 { 
-  background: var(--verde); 
-}
+/* C1: cuadrado rojo sólido */
+.c1 { background: var(--rojo); }
+
+/* C2: fondo verde + diamante */
+.c2 { background: var(--verde); }
 
 .diamante {
+  display: block;
   width: 44%;
   aspect-ratio: 1 / 1;
   background: var(--naranja);
+  border: 15px solid var(--teal);
   transform: rotate(45deg);
-  border: 4px solid var(--teal);
-  transition: transform 0.35s ease;
 }
 
-.c2:hover .diamante { 
-  transform: rotate(135deg); 
-}
-
-.c3 { 
-  background: #A3C4A1; 
-}
+/* C3: cuadrado verde claro sólido */
+.c3 { background: #A3C4A1; }
 
 /* ─── Fila 2 ─── */
-.c4 { 
-  background: var(--amarillo); 
-  padding: 14%; 
-}
+
+/* C4: marco amarillo con cuadrado rojo interior */
+.c4 { background: var(--amarillo); padding: 14%; }
 
 .cuadro-interior {
+  display: block;
   width: 100%;
   height: 100%;
   background: var(--rojo);
   border: 3px solid var(--crema);
 }
 
-.c5 { 
-  background: var(--crema); 
-}
+/* C5: círculo morado */
+.c5 { background: var(--crema); }
 
 .circulo {
+  display: block;
   width: 72%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: var(--morado);
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.c5:hover .circulo { 
-  transform: scale(1.15); 
-}
-
-.c6 { 
-  background: var(--crema); 
-}
+/* C6: círculo naranja */
+.c6 { background: var(--crema); }
 
 .circulo-naranja {
-  width: 72%;
+  display: block;
+  width: 60%;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: var(--naranja);
-  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.c6:hover .circulo-naranja { 
-  transform: scale(1.15); 
 }
 
 /* ─── Fila 3 ─── */
+
+/* C7: lista de barras de colores */
 .c7 {
   background: var(--crema);
   flex-direction: column;
-  gap: 5px;
-  padding: 12px 10px;
-  justify-content: center;
   align-items: stretch;
+  padding: 12px 10px;
+}
+
+/* Resetear estilos de lista */
+.lista-barras {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .barra {
-  height: 10px;
+  height: 40px;
   border-radius: 2px;
   transition: transform 0.2s ease;
 }
 
-.c7:hover .barra { 
-  transform: scaleX(1.05); 
-}
+.b1 { background: var(--naranja); width: 100%; height: 100%;}
+.b2 { background: var(--naranja); width: 100%; }
+.b3 { background: var(--salmon); width: 100%; }
+.b4 { background: var(--salmon); width: 100%; }
 
-.b1 { background: var(--salmon); }
-.b2 { background: var(--naranja); width: 80%; }
-.b3 { background: var(--amarillo); width: 65%; }
-.b4 { background: var(--rosa); width: 45%; }
+/* C8: marco teal con rectángulo blanco interior */
+.c8 { background: var(--teal); padding: 14%; height: 70%; width: 100%; }
 
-.c8 { 
-  background: var(--teal); 
-  padding: 14%; 
-}
-
-.rect-interior {
+.rect-medio {
+  display: block;
   width: 100%;
   height: 100%;
-  background: var(--blanco);
-  border: 3px solid var(--teal);
+  background: var(--teal);
+  border: 20px solid var(--blanco);
 }
 
-.c9 { 
-  background: var(--verde); 
-  padding: 14%; 
-}
+
+/* C9: marco verde con cuadrado verde oscuro interior */
+.c9 { background: var(--verde); padding: 14%; }
 
 .cuadro-verde-int {
+  display: block;
   width: 100%;
   height: 100%;
   background: #5A8A59;
-  border: 3px solid var(--crema);
+  border: 25px solid var(--crema);
 }
 
-/* ─── Etiquetas y Footer ─── */
-.label {
-  position: absolute;
-  font-size: 9px;
-  color: var(--azul-nav);
-  opacity: 0;
-  transition: opacity 0.2s;
-  pointer-events: none;
-  top: 4px;
-  left: 6px;
-  font-family: 'DM Mono', monospace;
-}
-
-.celda:hover .label { 
-  opacity: 0.5; 
-}
-
-.footer {
-  padding: 10px 20px 16px;
+/* ─── Pie de página ─── */
+footer.pie {
+  padding: 10px 24px 16px;
   font-size: 10px;
   color: var(--azul-nav);
-  opacity: 0.5;
+  opacity: 0.45;
   letter-spacing: 0.08em;
   text-align: right;
 }

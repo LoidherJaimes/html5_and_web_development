@@ -1,99 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interfaz 1.2</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interfaz 2</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-
 <body>
-    <!-- Navbar con pestañas -->
-    <nav class="navbar">
-        <div class="tab active">INICIO</div>
-        <div class="tab">ANÁLISIS</div>
-        <div class="tab">DATOS</div>
-        <div class="tab">CONFIG</div>
-    </nav>
 
-    <!-- Cuerpo principal -->
-    <div class="body">
+  <!-- Barra de navegación superior con pestañas -->
+  <nav class="navbar">
+    <button class="tab active">INICIO</button>
+    <button class="tab">ANÁLISIS</button>
+    <button class="tab">DATOS</button>
+    <button class="tab">CONFIG</button>
+  </nav>
 
-        <!-- Cuadrícula 2×2 de paneles -->
-        <div class="content">
-            <div class="panel"></div>
-            <div class="panel"></div>
-            <div class="panel"></div>
-            <div class="panel"></div>
-        </div>
+  <!-- Zona central: contenido principal + sidebar -->
+  <div class="cuerpo">
 
-        <!-- Sidebar con círculo y barras -->
-        <aside class="sidebar">
+    <!-- Cuadrícula 2×2 de paneles de contenido -->
+    <main class="content">
+      <section class="panel"></section>
+      <section class="panel"></section>
+      <section class="panel"></section>
+      <section class="panel"></section>
+    </main>
 
-            <div class="avatar"></div>
+    <!-- Panel lateral con métricas -->
+    <aside class="sidebar">
 
-            <div class="barras">
-                <div class="barra-row">
-                    <div class="barra-track">
-                        <div class="barra-fill br1"></div>
-                    </div>
-                </div>
-                <div class="barra-row">
-                    <div class="barra-track">
-                        <div class="barra-fill br2"></div>
-                    </div>
-                </div>
-                <div class="barra-row">
-                    <div class="barra-track">
-                        <div class="barra-fill br3"></div>
-                    </div>
-                </div>
-                <div class="barra-row">
-                    <div class="barra-track">
-                        <div class="barra-fill br4"></div>
-                    </div>
-                </div>
-                <div class="barra-row">
-                    <div class="barra-track">
-                        <div class="barra-fill br5"></div>
-                    </div>
-                </div>
-                <div class="barra-row">
-                    <div class="barra-track">
-                        <div class="barra-fill br6"></div>
-                    </div>
-                </div>
-                <div class="barra-row">
-                    <div class="barra-track">
-                        <div class="barra-fill br7"></div>
-                    </div>
-                </div>
-                <div class="barra-row">
-                    <div class="barra-track">
-                        <div class="barra-fill br8"></div>
-                    </div>
-                </div>
-                <div class="barra-row">
-                    <div class="barra-track">
-                        <div class="barra-fill br9"></div>
-                    </div>
-                </div>
-                <div class="barra-row">
-                    <div class="barra-track">
-                        <div class="barra-fill br10"></div>
-                    </div>
-                </div>
-            </div>
+      <!-- Indicador circular (avatar / stat) -->
+      <span class="avatar"></span>
 
-        </aside>
+      <!-- Lista de barras de métricas -->
+      <ul class="barras">
+        <li class="barra-row"><div class="barra-track"><span class="barra-fill br1"></span></div></li>
+        <li class="barra-row"><div class="barra-track"><span class="barra-fill br2"></span></div></li>
+        <li class="barra-row"><div class="barra-track"><span class="barra-fill br3"></span></div></li>
+        <li class="barra-row"><div class="barra-track"><span class="barra-fill br4"></span></div></li>
+        <li class="barra-row"><div class="barra-track"><span class="barra-fill br5"></span></div></li>
+        <li class="barra-row"><div class="barra-track"><span class="barra-fill br6"></span></div></li>
+        <li class="barra-row"><div class="barra-track"><span class="barra-fill br7"></span></div></li>
+        <li class="barra-row"><div class="barra-track"><span class="barra-fill br8"></span></div></li>
+        <li class="barra-row"><div class="barra-track"><span class="barra-fill br9"></span></div></li>
+        <li class="barra-row"><div class="barra-track"><span class="barra-fill br10"></span></div></li>
+      </ul>
 
-    </div>
+    </aside>
 
-    <div class="footer">HTML5 + CSS3 · grid · flexbox · dark UI</div>
+  </div>
 
+  <!-- Pie de página -->
+  <footer class="pie">HTML5 + CSS3 · grid · flexbox · dark UI</footer>
 
 </body>
-
 </html>
