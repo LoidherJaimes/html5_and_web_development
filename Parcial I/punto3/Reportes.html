@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - Finanzas Pro</title>
+    <link rel="stylesheet" href="Reportes.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+
+        <!-- Barra lateral de navegación -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finanzas<span>Pro</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="Dashboard.html">Inicio</a>
+                <a href="Ingresos.html">Ingresos</a>
+                <a href="Gastos.html">Gastos</a>
+                <a href="Reportes.html" class="active">Reportes</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="Login_1.html">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+
+            <!-- Banner de cabecera (concepto original del compañero) -->
+            <header class="report-header-banner">
+                <h1>Generar Reporte</h1>
+                <p>Configura los parámetros para tu informe financiero personalizado</p>
+            </header>
+
+            <!-- Formulario centrado (concepto original del compañero) -->
+            <section class="report-container-centered">
+                <form class="report-card">
+
+                    <p class="form-section-title">Parámetros del Informe</p>
+
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="tipo-reporte">Tipo de Reporte</label>
+                            <select id="tipo-reporte">
+                                <option>Mensual Detallado</option>
+                                <option>Anual</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="periodo">Periodo</label>
+                            <input type="month" id="periodo">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="notas">Descripción o Notas adicionales</label>
+                        <textarea id="notas" rows="5" placeholder="Escribe aquí..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary">Vista Previa</button>
+                        <button type="submit" class="btn-primary">Enviar Reporte</button>
+                    </div>
+
+                </form>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>

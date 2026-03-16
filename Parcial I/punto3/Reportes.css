@@ -1,0 +1,227 @@
+/* ============================================================
+   Reportes.css — Extiende y complementa el patrón de Dashboard
+   ============================================================ */
+
+/* ─── Variables de color (mismas que el resto del proyecto) ─── */
+:root {
+    --primary:      #004177;
+    --primary-dark: #003869;
+    --bg-light:     #f8f9fa;
+    --text-dark:    #333;
+    --text-muted:   #6c757d;
+    --white:        #ffffff;
+}
+
+/* ─── Reset y fuente base ─── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ─── Body ─── */
+.dashboard-body {
+    background-color: var(--bg-light);
+}
+
+/* ─── Layout principal: sidebar + contenido ─── */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+}
+
+/* ─── SIDEBAR ─── */
+.sidebar {
+    background-color: var(--primary);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+}
+
+.sidebar .logo {
+    padding: 0 2rem 2rem;
+    text-align: center;
+}
+
+.sidebar .logo h2 span {
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+.menu {
+    flex-grow: 1;
+}
+
+.menu a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    transition: 0.3s;
+    border-left: 4px solid transparent;
+}
+
+.menu a:hover,
+.menu a.active {
+    background-color: var(--primary-dark);
+    border-left: 4px solid #00a8ff;
+}
+
+.sidebar-footer {
+    padding: 1rem 2rem;
+    border-top: 2px solid rgb(255, 255, 255);
+}
+
+.sidebar-footer a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.sidebar-footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ─── CONTENIDO PRINCIPAL ─── */
+.main-content {
+    padding: 2rem 3rem;
+    overflow-y: auto;
+}
+
+/* ─── BANNER DE CABECERA ─── */
+.report-header-banner {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 3rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.report-header-banner h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.report-header-banner p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+/* ─── CONTENEDOR CENTRADO DEL FORMULARIO ─── */
+.report-container-centered {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.report-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ─── TÍTULO DE SECCIÓN DEL FORMULARIO ─── */
+.form-section-title {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* ─── GRID DE DOS COLUMNAS PARA LOS CAMPOS SUPERIORES ─── */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* ─── GRUPOS DE ENTRADA ─── */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.92rem;
+}
+
+.input-group select,
+.input-group input,
+.input-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-group textarea {
+    resize: none;
+}
+
+.input-group select:focus,
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--primary);
+}
+
+/* ─── BOTONES DE ACCIÓN ─── */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary);
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f7ff;
+}
