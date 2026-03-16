@@ -1,0 +1,236 @@
+/* Variables de color para consistencia */
+:root {
+    --primary: #004177;
+    --primary-dark: #003869;
+    --bg-light: #f8f9fa;
+    --text-dark: #333;
+    --text-muted: #6c757d;
+    --white: #ffffff;
+    --logout-hover: rgb(133, 16, 16);
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- SECCIÓN DE REPORTES --- */
+.report-section {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    max-width: 800px; /* Limitamos el ancho para que sea más legible */
+}
+
+.report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Usamos Grid para que el tipo de reporte y la fecha estén al lado */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.report-form label {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Estilización de Inputs, Selects y Textarea */
+.report-form select, 
+.report-form input, 
+.report-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.report-form textarea {
+    resize: none; /* Evita que el usuario deforme el diseño */
+}
+
+.report-form select:focus, 
+.report-form input:focus, 
+.report-form textarea:focus {
+    border-color: var(--primary);
+}
+
+/* Botones de acción */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary);
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f7ff;
+}
+
+/* Banner azul para quitar la sensación de vacío */
+.report-header-banner {
+    background-color: var(--primary);
+    color: white;
+    padding: 3rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    text-align: center; /* Centra el texto */
+}
+
+/* Contenedor para centrar la tarjeta del formulario */
+.report-container-centered {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.report-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 700px; /* Ancho controlado para que no se "estire" */
+}
+
+.form-section-title {
+    color: var(--primary);
+    font-weight: bold;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.logo {
+    background: var(--primary);
+    justify-content: center;
+    color: var(--white);
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-items: center;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    width: 100%; /* Ancho controlado para que no se "estire" */
+}
+
+.logo h2{
+    margin: 0; /* Elimina el margen predeterminado del h2 para un mejor centrado */
+    text-align: center; /* Asegura que el texto esté centrado dentro del logo */
+    padding-right: 25px; /* Espacio entre el texto y el borde derecho del logo */
+}
+
+.logout a {
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Asegura que el texto esté en una sola línea */
+    justify-content: center; /* Centra el texto dentro del enlace */
+    color: var(--primary); /* Azul por defecto */
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.logout a:hover {
+    background-color: var(--logout-hover);
+    color: white; /* Se invierte el color al pasar el mouse */
+}
+
+/* Arreglo de los enlaces del menú que se ven mal en tu imagen */
+.menu a {
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Asegura que el texto esté en una sola línea */
+    justify-content: center; /* Centra el texto dentro del enlace */
+    color: var(--primary); /* Azul por defecto */
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Asegura que cada enlace ocupe el mismo espacio */;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: var(--primary);
+    color: white; /* Se invierte el color al pasar el mouse */
+}
+
+.input-group label {
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.input-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+    margin-bottom: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group select {
+    padding: 0.4rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    width: 70%;
+    outline: 0.3rem solid transparent; /* Agrega un borde transparente para evitar que el diseño se mueva al hacer focus */
+    margin-bottom: 0.2rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input {
+    padding: 0.4rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    width: 70%;
+    outline: 0.3rem solid transparent; /* Agrega un borde transparente para evitar que el diseño se mueva al hacer focus */
+    margin-bottom: 0.2rem;
+    transition: border-color 0.3s;
+}

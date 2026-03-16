@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - Finanzas Pro</title>
+    <link rel="stylesheet" href="Reportes.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finanzas<span>Pro</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="Dashboard.html">Inicio</a>
+                <a href="#">Ingresos</a>
+                <a href="#">Gastos</a>
+                <a href="Reportes.html" class="active">Reportes</a>
+            </nav>
+            <nav class="logout">
+                <a class="logout" href="Login_1.html">Cerrar Sesión</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="report-header-banner">
+                <h1>Generar Reporte</h1>
+                <p>Configura los parámetros para tu informe financiero personalizado</p>
+            </header>
+
+            <section class="report-container-centered">
+                <form class="report-card">
+                    <div class="form-section-title">Parámetros del Informe</div>
+                    
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label>Tipo de Reporte</label>
+                            <select id="tipo-reporte">
+                                <option>Mensual Detallado</option>
+                                <option>Anual</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>Periodo</label>
+                            <input type="month">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Descripción o Notas adicionales</label>
+                        <textarea rows="5" placeholder="Escribe aquí..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary">Vista Previa</button>
+                        <button type="button" class="btn-primary">Generar y Descargar PDF</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
