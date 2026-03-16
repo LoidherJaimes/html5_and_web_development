@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastos - Finanzas Pro</title>
+    <link rel="stylesheet" href="Gastos.css">
+</head>
+
+<body class="dashboard-body">
+    <div class="dashboard-container">
+
+        <!-- Barra lateral de navegación -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Finanzas<span>Pro</span></h2>
+            </div>
+            <nav class="menu">
+                <a href="Dashboard.html">Inicio</a>
+                <a href="Ingresos.html">Ingresos</a>
+                <a href="Gastos.html" class="active">Gastos</a>
+                <a href="Reportes.html">Reportes</a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="Login_1.html">Cerrar Sesión</a>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+
+            <header class="main-header">
+                <h1>Gastos</h1>
+                <p>Registro y resumen de tus salidas de dinero</p>
+            </header>
+
+            <!-- Tarjetas de resumen -->
+            <section class="stats-grid">
+                <div class="card total">
+                    <h3>Total del Mes</h3>
+                    <p class="amount">$1,550.00</p>
+                    <span class="trend">↑ 3% vs mes anterior</span>
+                </div>
+                <div class="card promedio">
+                    <h3>Gasto Promedio</h3>
+                    <p class="amount">$387.50</p>
+                    <span class="trend">por registro este mes</span>
+                </div>
+                <div class="card mayor">
+                    <h3>Mayor Gasto</h3>
+                    <p class="amount">$750.00</p>
+                    <span class="trend">Alquiler — 01/06/2025</span>
+                </div>
+            </section>
+
+            <!-- Tabla de gastos -->
+            <section class="content-area">
+                <div class="table-card">
+                    <header class="table-header">
+                        <h3>Historial de Gastos</h3>
+                    </header>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Descripción</th>
+                                    <th>Categoría</th>
+                                    <th>Monto</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01/06/2025</td>
+                                    <td>Alquiler mensual</td>
+                                    <td><span class="badge cat-vivienda">Vivienda</span></td>
+                                    <td class="monto negativo">$750.00</td>
+                                    <td><span class="badge estado-confirmado">Confirmado</span></td>
+                                </tr>
+                                <tr>
+                                    <td>03/06/2025</td>
+                                    <td>Supermercado semanal</td>
+                                    <td><span class="badge cat-alimentacion">Alimentación</span></td>
+                                    <td class="monto negativo">$200.00</td>
+                                    <td><span class="badge estado-confirmado">Confirmado</span></td>
+                                </tr>
+                                <tr>
+                                    <td>10/06/2025</td>
+                                    <td>Servicio de internet</td>
+                                    <td><span class="badge cat-servicios">Servicios</span></td>
+                                    <td class="monto negativo">$350.00</td>
+                                    <td><span class="badge estado-confirmado">Confirmado</span></td>
+                                </tr>
+                                <tr>
+                                    <td>18/06/2025</td>
+                                    <td>Transporte mensual</td>
+                                    <td><span class="badge cat-transporte">Transporte</span></td>
+                                    <td class="monto negativo">$250.00</td>
+                                    <td><span class="badge estado-pendiente">Pendiente</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>
